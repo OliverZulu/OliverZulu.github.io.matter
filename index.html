@@ -1,0 +1,3112 @@
+<!DOCTYPE html>
+<!--
+    Primavera Contest 2020
+    
+    Pages (listed in order);
+    - Home
+    - Joining
+    - Challenges
+    - Showcase
+    - Judging
+    - Team Scores
+    - Participants
+    - Teams
+    - Resources
+    - Credits
+    
+    Homepages;
+    Buzzaw; https://www.https://www.khanacademy.org/computer-programming/team-buzzaw-homepage-reupload/6357266764546048
+    Cloudlark; https://www.khanacademy.org/computer-programming/cloudlark-home-page/6144632438931456
+    Icicle; https://www.khanacademy.org/computer-programming/icicle-homepage/4518595804282880
+    Mantattack; https://www.khanacademy.org/computer-programming/mantattack-logo-wip/5664966521405440
+    Mountaintop; https://www.khanacademy.org/computer-programming/i/4692275855376384
+    Pyroach; https://www.khanacademy.org/computer-programming/team-pyroach/5072740297752576
+    Terratrice; https://www.khanacademy.org/computer-programming/-t-e-r-r-a-t-r-i-c-e-/6431129247432704
+    
+    IMPORTANT; If there is no "view" button next to your name in the "participants" page that is because we don't have your KAID value. Please let us know if your kaid is not shown. :)
+    
+    Gray Wolf was super helpful and nice so he decided to take the time to make this website for Primavera! :)
+    
+    tested on
+    - chrome, firefox, edge, chromium edge, opera, iOS (iPhone)
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Primavera [2020][Joining Closed].</title>
+        <link 
+            href="https://fonts.googleapis.com/css?family=Material+Icons" 
+            rel="stylesheet">
+        <link 
+            href="https://fonts.googleapis.com/css2?family=Abel&family=Raleway:wght@700&display=swap" 
+            rel="stylesheet">
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                font-family: 'Abel', sans-serif;
+                background-color: rgb(133, 205, 202);
+                background: linear-gradient(180deg, rgba(64, 179, 162,1) 30%, rgba(133, 205, 202,1) 100%);
+                background-attachment: fixed;
+                margin: 0;
+                font-size: 16px;
+            }
+            * {
+                box-sizing: border-box;
+            }
+
+            h1 {
+                margin: 0 0 0 0;
+            }
+            header {
+                background-color: rgb(226, 125, 95);
+                position: fixed;
+                top: 0px;
+                margin: auto;
+                width: 100%;
+                z-index: 5;
+            }
+            .nav {
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                margin: 0.2em 0.1em;
+                padding: 0.2em 0;
+            }
+            .nav a {
+                text-decoration: none;
+                display: block;
+                padding: 0.1em 0.4em;
+                color: rgb(255, 255, 255);
+            }
+            main {
+                margin-top: 40px;
+            }
+            main a {
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+            }
+            .nav a:hover, main a:hover {
+                color: rgba(255, 255, 255, 0.8);
+                transition: all 0.2s ease-out;
+            }
+            #home .nav a {
+                font-size: 40px;
+                color: rgb(133, 205, 202);
+                color: rgb(0, 0, 0);
+            }
+            #home .nav a:hover {
+                color: rgba(255, 255, 255, 0.8);
+                transition: all 0.3s ease-out;
+            }
+            .nav li.active a, #teams li.active a {
+                color: rgb(0, 0, 0);
+                color: rgb(232, 168, 124);
+                color: rgba(0, 0, 0, 50);
+                transition: all 1s ease-out;
+            }
+            
+            .page {
+                padding: 1em 1em 1em 1em;
+                text-align: left;
+            }
+            
+            #home {
+                text-align: center;
+            }
+            #home h1 {
+                margin: 20px 0 20px 0;
+            }
+            
+            .heading {
+                color: rgb(255, 255, 255);
+                font-size: 2.5em;
+            }
+            
+            #teams nav ul.nav {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                margin-top: 10px;
+            }
+            #team-content {
+                animation: fadeIn 3s ease forwards;
+            }
+            #team-avatars {
+                animation: fadeIn 3s ease forwards;
+            }
+            .avatars-avatar {
+                padding: 0 2px;
+            }
+
+            .icon-div {
+                display: flex;
+            }
+            .icon-div .material-icons {
+                font-size: 50px;
+                padding-left: 10px;
+                color: rgb(232, 168, 124);
+                color: rgba(0, 0, 0, 0.5);
+            }
+            
+            #home .heading {
+                font-size: 4em;
+            }
+            
+            .showcase-articles {
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                text-align: left;
+            }
+            .showcase-articles article {
+                padding: 0px 30px;
+            }
+            #showcase h3 {
+                margin-bottom: 0;
+            }
+            
+            .table-scores, .table-members {
+                width: 100%;
+                border: solid 0px;
+                border: none;
+                border-collapse: separate;
+                border-spacing: 0 7px;
+                line-height: 20px;
+                margin-top: -15px;
+            }
+            .table-members {
+                margin-top: -25px;
+            }
+            .table-scores thead th, .table-members thead th {
+                font-weight: normal;
+            }
+            .table-members tbody {
+                display:block;
+                overflow:auto;
+                height:380px;
+                width:100%;
+                margin-top:-15px;
+            }
+            .table-members thead tr {
+                display: block;
+            }
+            .table-scores td, .table-members td {
+                font-size: 14px;
+                line-height: 40px;
+            }
+            .table-scores tbody tr, .table-contests tbody tr, .table-members tbody tr {
+                background-color: rgba(224, 77, 67, 0.25);
+                background-color: rgba(133, 205, 202, 1);
+            }
+            .table-scores thead a, .table-members thead a {
+                color: rgba(255, 255, 255, 0.7);
+            }
+            .table-scores thead a:hover, .table-members thead a:hover {
+                color: rgba(255, 255, 255, 0.5);
+            }
+            .scores-header-team, .scores-team,
+            .members-header-name, .members-name {
+                text-align:left;
+                width: 100%;
+            }
+            .members-header-name {
+                padding-left: 40px;
+            }
+            .scores-header-points, td.scores-points,
+            .members-header-points, td.members-points {
+                text-align:right;
+                min-width: 65px;
+                padding-right: 15px;
+            }
+            .members-header-points {
+                padding-right: 30px;
+            }
+            .members-header-level, .members-level {
+                text-align:center;
+                min-width: 60px;
+            }
+            .members-header-level {
+                padding-right: 20px;
+            }
+            .members-header-info {
+                padding-right: 25px;
+            }
+            .members-header-team {
+                padding-right: 55px;
+            }
+            .members-team {
+                text-align: left;
+                min-width: 75px;
+            }
+            .members-header-team, .members-team {
+                text-align:left;
+            }
+            .scores-header-members, .scores-members {
+                text-align:center;
+                min-width: 85px;
+            }
+            .scores-header-home, .scores-home,
+            .members-header-info, .members-info {
+                text-align:center;
+                min-width: 65px;
+            }
+            .scores-avatar, .members-avatar {
+                min-width: 40px;
+                padding-left: 5px;
+            }
+            .scores-avatar img, .members-avatar img {
+                padding: 0px;
+                margin:0;
+                margin-top:10px;
+                margin-bottom: -10px;
+            }
+            .scores-avatar img {
+                -webkit-animation: spin 2s ease 1s forwards;
+                   -moz-animation: spin 2s ease 1s forwards;
+                     -o-animation: spin 2s ease 1s forwards;
+                        animation: spin 2s ease 1s forwards;
+            }
+            .scores-home a, .members-info a {
+                color: rgba(255, 255, 255, 0.7);
+            }
+            .scores-home a:hover, .members-info a:hover {
+                color: rgba(255, 255, 255, 0.5);
+            }
+            
+            #participants-dropdown {
+                float: right;
+                margin-right: 15px;
+                margin-top: 5px;
+            }
+            #participants-dropdown .dropdown-button {
+                background-color: rgba(133, 205, 202, 1);
+                color: rgba(255, 255, 255, 0.9);
+                padding: 10px;
+                border: none;
+                font-size: 16px;
+                font-family: 'Abel', sans-serif;
+            }
+            #participants-dropdown .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            #participants-dropdown .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: rgb(241, 241, 241);
+                min-width: 120px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                font-size: 16px;
+                font-family: 'Abel', sans-serif;
+            }
+            #participants-dropdown .dropdown-content a {
+                color: black;
+                padding: 10px;
+                text-decoration: none;
+                display: block;
+            }
+            #participants-dropdown .dropdown-content a:hover {
+                background-color: #ddd;
+                background-color: rgba(133, 205, 202, 1);
+            }
+            #participants-dropdown .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            #participants-dropdown .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+            }
+
+            .participant-scores-modal {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(1.1);
+                transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+                text-align: left;
+                margin: 0px;
+                background-color: rgba(68, 68, 68, 0.4);
+                border: solid 5px rgb(227, 63, 63) 20px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                z-index:25;
+            }
+            .participant-scores-modal-wrapper {
+                font-size: 15px;
+                margin:auto;
+                margin-top:15%;
+                padding:0;
+                width: 24rem;
+                border: solid 5px rgb(227, 63, 63) 20px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                background-color: rgb(255, 255, 255);
+            }
+            .participant-scores-modal-content {
+                width: auto; 
+                overflow-x: hidden; 
+                overflow-x: auto; 
+                height: 325px;
+                padding: 1rem 1.5rem;
+                background-color: rgba(225, 225, 225, 0.5);
+                padding: 20px;
+            }
+            #participant-scores-modal-header {
+                font-size: 18px;
+                margin:auto;
+                margin-top:15%;
+                background-color: rgba(226, 125, 95);
+                padding: 1rem 1.5rem;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            .participant-scores-close-button {
+                float: right;
+                text-align: center;
+                cursor: pointer;
+                border-radius: 20px;
+                background-color: rgba(0, 0, 0, 0.25);
+                padding:0px 6px;
+                margin:-5px -15px;
+            }
+            .participant-scores-close-button:hover {
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+            .show-modal {
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1.0);
+                transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+            }
+            .participant-scores-modal-box {
+                text-align: left;
+                margin-bottom: 6px;
+                margin: 1rem 0;
+                padding: 16px;
+                font-size: 14px;
+                background-color: transparent;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .home-avatar-Buzzaw {
+                -webkit-animation: slideRight 3s ease forwards;
+                   -moz-animation: slideRight 3s ease forwards;
+                     -o-animation: slideRight 3s ease forwards;
+                        animation: slideRight 3s ease forwards;
+            }
+            .home-avatar-Cloudlark {
+                -webkit-animation: slideRight 2.8s ease forwards;
+                   -moz-animation: slideRight 2.8s ease forwards;
+                     -o-animation: slideRight 2.8s ease forwards;
+                        animation: slideRight 2.8s ease forwards;
+            }
+            .home-avatar-Icicle {
+                -webkit-animation: slideRight 2.6s ease forwards;
+                   -moz-animation: slideRight 2.6s ease forwards;
+                     -o-animation: slideRight 2.6s ease forwards;
+                        animation: slideRight 2.6s ease forwards;
+            }
+            .home-avatar-Mantattack {
+                -webkit-animation: slideRight 2.4s ease forwards;
+                   -moz-animation: slideRight 2.4s ease forwards;
+                     -o-animation: slideRight 2.4s ease forwards;
+                        animation: slideRight 2.4s ease forwards;
+            }
+            .home-avatar-Mountaintop {
+                -webkit-animation: slideRight 2.2s ease forwards;
+                   -moz-animation: slideRight 2.2s ease forwards;
+                     -o-animation: slideRight 2.2s ease forwards;
+                        animation: slideRight 2.2s ease forwards;
+            }
+            .home-avatar-Pyroach {
+                -webkit-animation: slideRight 2.0s ease forwards;
+                   -moz-animation: slideRight 2.0s ease forwards;
+                     -o-animation: slideRight 2.0s ease forwards;
+                        animation: slideRight 2.0s ease forwards;
+            }
+            .home-avatar-Terratrice {
+                -webkit-animation: slideRight 1.8s ease forwards;
+                   -moz-animation: slideRight 1.8s ease forwards;
+                     -o-animation: slideRight 1.8s ease forwards;
+                        animation: slideRight 1.8s ease forwards;
+            }
+
+            .showPage {
+                -webkit-animation: slide 1s ease forwards, fadeIn 2.5s ease forwards;
+                   -moz-animation: slide 1s ease forwards, fadeIn 2.5s ease forwards;
+                     -o-animation: slide 1s ease forwards, fadeIn 2.5s ease forwards;
+                        animation: slide 1s ease forwards, fadeIn 2.5s ease forwards;
+            }
+            
+            @-webkit-keyframes slideRight {
+                0%, 60% {
+                    transform: translateX(-1200px);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+            @-moz-keyframes slideRight {
+                0%, 60% {
+                    transform: translateX(-1200px);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+            @-o-keyframes slideRight {
+                0%, 60% {
+                    transform: translateX(-1200px);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+            @keyframes slideRight {
+                0%, 60% {
+                    transform: translateX(-1200px);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+
+            @-webkit-keyframes flip {
+    		    0%, 100% {
+    		        transform: rotateX(0deg);
+    		    }
+    		    50% {
+    		        transform: rotateX(180deg);
+    		    }
+    		}
+    		@-moz-keyframes flip {
+    		    0%, 100% {
+    		        transform: rotateX(0deg);
+    		    }
+    		    50% {
+    		        transform: rotateX(180deg);
+    		    }
+    		}
+    		@-o-keyframes flip {
+    		    0%, 100% {
+    		        transform: rotateX(0deg);
+    		    }
+    		    50% {
+    		        transform: rotateX(180deg);
+    		    }
+    		}
+    		@keyframes flip {
+    		    0%, 100% {
+    		        transform: rotateX(0deg);
+    		    }
+    		    50% {
+    		        transform: rotateX(180deg);
+    		    }
+    		}
+
+            @-webkit-keyframes slide {
+                0% {
+    		        transform: translateY(-600px);
+    		    }
+    		    100% {
+    		        transform: ranslateY(0px);
+    		    }
+            }
+            @-moz-keyframes slide {
+                0% {
+    		        transform: translateY(-600px);
+    		    }
+    		    100% {
+    		        transform: ranslateY(0px);
+    		    }
+            }
+            @-o-keyframes slide {
+                0% {
+    		        transform: translateY(-600px);
+    		    }
+    		    100% {
+    		        transform: ranslateY(0px);
+    		    }
+            }
+            @keyframes slide {
+                0% {
+    		        transform: translateY(-600px);
+    		    }
+    		    100% {
+    		        transform: ranslateY(0px);
+    		    }
+            }
+            
+            @-webkit-keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            @-moz-keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            @-o-keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="nav">
+                    <li id="homeButton" class="active"><a href="https://www.khanacademy.org" onClick="swichPage('#home');return false;" title="Home" class="material-icons">house</a></li>
+                    <li id="joiningButton"><a href="https://www.khanacademy.org" onClick="swichPage('#joining');return false;" title="Joining" class="material-icons">person_add</a></li>
+                    <li id="challengesButton"><a href="https://www.khanacademy.org" onClick="swichPage('#challenges');return false;" title="Challenges" class="material-icons">emoji_events</a></li>
+                    <li id="showcaseButton"><a href="https://www.khanacademy.org" onClick="swichPage('#showcase');return false;" title="Showcase" class="material-icons">star</a></li>
+                        <li id="judgingButton"><a href="https://www.khanacademy.org" onClick="swichPage('#judging');return false;" title="Judging" class="material-icons">thumbs_up_down</a></li>
+                        <li id="scoresButton"><a href="https://www.khanacademy.org" onClick="swichPage('#scores');return false;" title="Scores" class="material-icons">equalizer</a></li>
+                        <li id="participantsButton"><a href="https://www.khanacademy.org" onClick="swichPage('#participants');return false;" title="Participants" class="material-icons">person</a></li>
+                        <li id="teamsButton"><a href="https://www.khanacademy.org" onClick="swichPage('#teams');return false;" title="Teams" class="material-icons">people</a></li>
+                        <li id="resourcesButton"><a href="https://www.khanacademy.org" onClick="swichPage('#resources');return false;" title="Resources" class="material-icons">format_list_bulleted</a></li>
+                        <li id="creditsButton"><a href="https://www.khanacademy.org" onClick="swichPage('#credits');return false;" title="Credits" class="material-icons">bubble_chart</a></li>
+                </ul>
+            </nav> <!--top navigation-->
+        </header>
+        <main>
+            <div id="home" class="page">
+                <h1 class="heading">Primavera</h1>
+                <h2>Welcome to the 2020 Coding Contest!</h2>
+                <article>
+                    <p>Primavera is a spring coding contest in which users participate all throughout Spring in coding challenges.</p>
+                    <p>Individual winners may receive some awards, but bigger events may call for bigger rewards. At the end of Spring the judges will pick one or more users who showed amazing talent.</p>
+                    <p>Challenges could be themed or open to you. All of that will be revealed during the course of the contest.</p>
+                    <p>Start date: March 16-22, 2020</p>
+                    <p>Fun Fact: Primavera means spring in Spanish</p>
+                </article>
+                <article>
+                    <div id="home-avatars"></div>
+                </article>
+            </div> <!--home-->
+            <div id="joining" class="page">
+                <div class="icon-div"><h1 class="heading">Joining</h1><span class="material-icons">person_add</span></div>
+                <section class="judging-articles">
+                    <article>
+                        <h2>Why join?</h2>
+                        <p>So you can participate in the most awesome coding contest on Khan Academy.</p>
+                    </article>
+                    <article>
+                        <h2>How to join</h2>
+                        <p>Joining is easy; simply post a comment in the JOIN THREAD in the Tips & Thanks telling which <a href="https://www.khanacademy.org" onClick="swichPage('#teams');return false;" title="Team">team</a> you prefer to be in and how advanced of a programmer you are (0-4):</p>
+                        <ul>
+                            <li>0 - Beginner</li>
+                            <li>1 - Familiar</li>
+                            <li>2 - Intermediate</li>
+                            <li>3 - Advanced</li>
+                            <li>4 - Expert</li>
+                        </ul>
+                        <p>After that, post a SINGLE period <strong>.</strong> in the NEWS THREAD so you'll get notified when the new challenges come out.</p>
+                        <p>NOTE: If you wish to judge in this contest instead of participating, that is also fine. Up to 3-4 other users besides myself have the option to help judge.</p>
+                    </article>
+                </section>
+            </div> <!--joining-->
+            <div id="challenges" class="page">
+                <div class="icon-div"><h1 class="heading">Challenges</h1><span class="material-icons">emoji_events</span></div>
+                <section class="challenges-articles">
+                    <article>
+                        <h2>Current Challenge</h2>
+                        <p>Challenge 6: <span class="date">Sunday May 10th - Sunday June 1st</span></p>
+                        <h5>Special Rules</h5>
+                        <p>Okay, so in this challenge there are no special rules, right? Well, that is what you think. You have 3 weeks to make a program of your choice about any topic. Be ready for some cool mini events that will be anounced a couple days in advance! </p>
+                        <h5>This Week's Learning</h5>
+                        <p>None specific.</p>
+                        <ul>
+                            <li>Check out the <a target="_blank" href="https://www.khanacademy.org/computer-programming/primavera-documentation/4670814474698752">Primavera Documentation</a> to learn about many cool coding techniques!</li>
+                        </ul>
+                    </article>
+                </section>
+                
+                <section class="challenges-articles">
+                    <article>
+                        <h2>Next Challenge</h2>
+                        <p>Challenge 7: <span class="date">June 1st - June 8th</span></p>
+                        <h5>Special Rules</h5>
+                        <p>Competition; Either make a graphic poster for a cool idea for competition, or make a game where you play in that competition. Think of cool ideas; Water Fights with balloons and water guns, a pie throwing contest, go wild!
+Summary; Either make a cool poster for a game, or make that game! You could make a real life competition (like a sport) or make some made up. Things like a water balloon fight, ect.</p>
+                        <h5>This Week's Learning</h5>
+                        <p>Application Programming Interface (API)</p>
+                        <ul>
+                            <li>Check the API tutorials by Jett Burns <a target="_blank" href="https://www.khanacademy.org/computer-programming/khan-api-lookup/4538740697300992">here.</a></li>
+                            <li>You can use this (unfinished) tool by To13 to look up the API <a target="_blank" href="https://www.khanacademy.org/computer-programming/api-lesson-1-getting-json/6658646754000896">here.</a></li>
+                            <li>Check out the <a target="_blank" href="https://www.khanacademy.org/computer-programming/primavera-documentation/4670814474698752">Primavera Documentation</a> to learn about many cool coding techniques!</li>
+                        </ul>
+                    </article>
+                </section>
+            </div> <!--challenges-->
+            <div id="showcase" class="page">
+                <div class="icon-div"><h1 class="heading">Showcase</h1><span class="material-icons">star</span></div>
+                <article>
+                    <p>Below is a list of the programs that have either won their section of a challenge, or some other event.</p>
+                </article>
+                <h3>Challenge 5: Use science in your program.</h3>
+                <section class="showcase-articles">
+                    <article>
+                        <p>Level 0 -> <a href="https://www.khanacademy.org/computer-programming/primevera-graphic-level-0-growing-plant/5499018965041152">Legolordoftherings from team Mountaintop</a></p>
+                    </article>
+                    <article>
+                        <p>Level 1 -> <a href="https://www.khanacademy.org/computer-programming/chemist-apprentice-primavera/6044287726141440">The Spartan from team Mantattack</a></p>
+                    </article>
+                    <article>
+                        <p>Level 2 -> <a href="https://www.khanacademy.org/computer-programming/i/5709513251766272">AquA217 from team Icicle.</a></p>
+                    </article>
+                    <article>
+                        <p>Level 3 -> <a href="https://www.khanacademy.org/computer-programming/reality-game/6414196924104704">Blaze Programming from team Mantattack</a></p>
+                    </article>
+                    <article>
+                        <p>Level 4 -> <a href="https://www.khanacademy.org/computer-programming/i/6368306339397632">Little Moose from team Mountaintop</a></p>
+                    </article>
+                </section>
+                
+                <h3>Challenge 4: Make a graphic.</h3>
+                <section class="showcase-articles">
+                    <article>
+                        <p>Level 0 -> <a href="https://www.khanacademy.org/computer-programming/new-program/5024063607422976">Legolordoftherings from team Mountaintop</a></p>
+                    </article>
+                    <article>
+                        <p>Level 1 -> <a href="https://www.khanacademy.org/computer-programming/horse-stained-glass/4795924828536832">Colored Feather 😜 from team Terratrice</a></p>
+                    </article>
+                    <article>
+                        <p>Level 2 -> <a href="https://www.khanacademy.org/computer-programming/palace-of-sorrow/6750903646699520">VULTURNUS from Pyroach</a></p>
+                    </article>
+                    <article>
+                        <p>Level 3 -> <a href="https://www.khanacademy.org/computer-programming/sunset/4941336019353600">Blaze Programming from team Mantattack</a></p>
+                    </article>
+                    <article>
+                        <p>Level 4 -> <a href="https://www.khanacademy.org/computer-programming/dream/5166880365363200">🆃🅷🅴■🆂🅲🆈🆃🅷🅴 from Cloudlark</a></p>
+                    </article>
+                </section>
+                <h3>Challenge 3: Choose a timeline.</h3>
+                <section class="showcase-articles">
+                    <article>
+                        <p>Level 0 -> <a href="https://www.khanacademy.org/computer-programming/dawn/6408171855429632">ＶＵＬＴＵＲＮＵＳ from Pyroach</a></p>
+                    </article>
+                    <article>
+                        <p>Level 1 -> <a href="https://www.khanacademy.org/computer-programming/the-battle-at-helms-deep-enter-for-primavera-2020/5592051608076288">FantasticSkill7 from Buzzaw</a></p>
+                    </article>
+                    <article>
+                        <p>Level 2 -> <a href="https://www.khanacademy.org/computer-programming/code-runner-primavera/6024186079887360">Jaywin from Cloudlark</a></p>
+                    </article>
+                    <article>
+                        <p>Level 3 -> <a href="https://www.khanacademy.org/computer-programming/i/5596250924269568">Mushy Avacado from Terratrice</a></p>
+                    </article>
+                    <article>
+                        <p>Level 4 -> <a href="https://www.khanacademy.org/computer-programming/pet-pals-pre-release/5547877107122176">😆BugWarrior😆</a></p>
+                    </article>
+                </section>
+                <h3>Challenge 2: mouseClicked and/or Scene Management</h3>
+                <section class="showcase-articles">
+                    <article>
+                        <p>Level 0-1</p>
+                        <ul>
+                            <li><a href="https://www.khanacademy.org/computer-programming/-/6340093481730048">ＶＵＬＴＵＲＮＵＳ</a></li>
+                            <li><a href="https://www.khanacademy.org/computer-programming/-/53648239374008326">Fantastickill7</a></li>
+                            <li><a href="https://www.khanacademy.org/computer-programming/-/6679960961040384">Timothy</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <p>Level 2</p>
+                        <ul>
+                            <li><a href="https://www.khanacademy.org/computer-programming/-/5455382181986304">Σɼɑǥσהּ Ɓℓɑʐḛ</a></li>
+                            <li><a href="https://www.khanacademy.org/computer-programming/-/6151040702496768">ǤЖ</a></li>
+                            <li><a href="https://www.khanacademy.org/computer-programming/-/5114917972754432">Frost</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <p>Level 3-4</p>
+                        <ul>
+                            <li><a href="https://www.khanacademy.org/computer-programming/-/6548251661713408">Arrowhead Co.</a></li>
+                            <li><a href="https://www.khanacademy.org/computer-programming/-/5804380875014144">xacer</a></li>
+                            <li><a href="https://www.khanacademy.org/computer-programming/-/5182965035450368">Gray Wolf</a></li>
+                        </ul>
+                    </article>
+                </section>
+                <h3>Challenge 1: Team homepages</h3>
+                <section class="showcase-articles">
+                    <article>
+                        <p>Top 2</p>
+                        <ul>
+                            <li><a href="https://www.khanacademy.org/computer-programming/-t-e-r-r-a-t-r-i-c-e-/6431129247432704">Kruxe</a></li>
+                            <li><a href="https://www.khanacademy.org/computer-programming/team-pyroach/5072740297752576">Gray Wolf</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <p>Top in each team</p>
+                        <ul>
+                            <li>Buzzaw: <a href="https://www.https://www.khanacademy.org/computer-programming/team-buzzaw-homepage-reupload/6357266764546048">xacer</a></li>
+                            <li>Cloudlark: <a href="https://www.khanacademy.org/computer-programming/cloudlark-home-page/6144632438931456">lkdsjf</a></li>
+                            <li>Icicle: <a href="https://www.khanacademy.org/computer-programming/icicle-homepage/4518595804282880">JentGent</a></li>
+                            <li>Mantattack: <a href="https://www.khanacademy.org/computer-programming/mantattack-logo-wip/5664966521405440">Blaze Programming</a></li>
+                            <li>Mountaintop: <a href="https://www.khanacademy.org/computer-programming/i/4692275855376384">Ender Haven</a></li>
+                            <li>Pyroach: <a href="https://www.khanacademy.org/computer-programming/team-pyroach/5072740297752576">Gray Wolf</a></li>
+                            <li>Terratrice: <a href="https://www.khanacademy.org/computer-programming/-t-e-r-r-a-t-r-i-c-e-/6431129247432704">Kruxe</a></li>
+                        </ul>
+                    </article>
+                </section>
+            </div> <!--showcase-->
+            <div id="judging" class="page">
+                <div class="icon-div"><h1 class="heading">Judging</h1><span class="material-icons">thumbs_up_down</span></div>
+                <section class="judging-articles">
+                    <article>
+                        <h2>Who are the judges?</h2>
+                        <p>Below is a list of all the judges for this year's Primavera:</p>
+                        <ul>
+                            <li>Iron Programming</li>
+                            <li>𝒥𝒶𝒸𝓀𝒶𝓉𝓉𝒶𝒸𝓀𝟦𝟪𝟧</li>
+                            <li>William Wang</li>
+                            <li>Weather</li>
+                            <li>LoneNinja</li>
+                            <li>Cochran</li>
+                            <li>SimG</li>
+                            <li>Une</li>
+                            <li>Captain Argon</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h2>Interested in judging?</h2>
+                        <p>Ask in the Tips & Thanks if you think you are a capable judge. This will require that you are at least an intermediate level programmer.</p>
+                    </article>
+                    <article>
+                        <h2>When we judge</h2>
+                        <p>Each challenge will last 1-3 weeks; at the end of the challenge the Judges will need to judge the teams' projects. As soon as all the judges' results get in I will look them over (and possibly tweak them a bit) and post the final results at the <a href="https://www.khanacademy.org/computer-programming/primavera-2020/6136971197169664?qa_expand_key=kaencrypted_1f5ecf62b6757ffbc726195f07215dd0_a73d95443f88ecf62d91868b12a84e35e3591ddfc12176f9ade89f147bf3c6688642c6974ef10de8e1822c03ed2dbca2335a10eae591ce1cac11ee51f2ab310b4f9f44700b7e1f2d9fee9611c4c4e6332237142b463a05a78cde10b1fa93cfd4ea352c8486ea48accd08eb207e3611c0e596bb55f9ca748e6fad9d2f8eb9d0b7c07f1d88a3a6dc5a40a4b73cfa04b123805d375f6c867ec18938558fd9fab57fa18cc4d29e535c3b3160c247b3404e070ac49fe7f93db2c5714d15a949ab4d3b">News thread</a>.
+
+When judging, a program rated 5.5/10 will be rated "average". Don't feel bad if you get less than the average though, that just means you have room to learn! Take the opportunity and do all you can to learn from your programming!</p>
+                    </article>
+                    <article>
+                        <h2>What we judge on</h2>
+                        <p>Judges will vote based upon the following algorithm;</p>
+                        <ul>
+                            <li>Fitting theme -> If the user completely ignores the theme they will score less points.</li>
+                            <li>Correct Code/No Logic Errors -> If judges see programs with "dead code" or code that is not working correctly they will score less points.</li>
+                            <li>Code readability/format (comments, indention, ect) -> If the program has messy code that is hard to read it will score less points.</li>
+                            <li>Efficiency (lag free, minimal repeated code, no unecessary intensive tasks) -> The more effecient the program's code is the better it scores!</li>
+                            <li>Graphic Design/Creativity -> Creative Programs or ones that show excelent graphic design will score more.</li>
+                            <li>Complexity -> Similar to efficiency, if you have particularly advanced code that reduces effort and time you wills score more.</li>
+                            <li>Visual Design (how the program presents itself) -> In some ways similar to Graphic Design, but includes other things besides just how good the graphics are.</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h2>Scoring and results</h2>
+                        <p>We divide all the contestants into their level group; Each level group is as follows (0, 1, 2, 3, 4) which makes a total of 5 groups. Each user will score X/10 points where 5.5/10 is the average program. Don't feel bad if you didn't score well, you just need to work harder ad learn more for the next challenge!</p>
+                        <p>The best program from each group will "win" that challenge and be shown in the NEWS THREAD as well as the user who made that being awarded 5 points.</p>
+                        <p>At the end of spring the team with the most points (from all their members) will be declared the winning team.</p>
+                        <p>There will also be "5 Amazing Programmers" featured for their demonstrated skill and hard work.</p>
+                    </article>
+                </section>
+            </div> <!--judging-->
+            <div id="resources" class="page">
+                <div class="icon-div"><h1 class="heading">Resources</h1><span class="material-icons">format_list_bulleted</span></div>
+                <section class="resources-articles">
+                    <article>
+                        <h2>Khan Academy (KA) resources</h2>
+                        <p>Below are some links to useful resources within Khan Academy</p>
+                        <ul>
+                            <li><a href="https://www.khanacademy.org/computer-programming/primavera-documentation/4670814474698752" title="Primavera Documentation" target="_blank">Primavera Documentation</a> - useful tutorials on concepts covered in the challenges</li>
+                            <li><a href="https://www.khanacademy.org/computing/computer-programming/pjs-documentation" title="KA Processing.js Documentation" target="_blank">KA Processing.js Documentation</a> - useful coding examples and explanations</li>
+                            <li><a href="https://www.khanacademy.org/computing/computer-programming/browse" title="Browse Projects" target="_blank">Browse Projects</a> - AKA. The Hot List - for some ideas and inspiration</li>
+                            <li><a href="https://www.khanacademy.org/computing/computer-programming" title="Computer Programming" target="_blank">Computer Programming (KA)</a> - list of programming courses available on KA</li>
+                            <li><a href="https://www.khanacademy.org/computer-programming/primavera-2020/6136971197169664" title="Primavera (archived)" target="_blank">Primavera (archived)</a> - the original Primavera program</li>
+                            <!--<li><a href="#" title="" target="_blank">link</a></li>-->
+                        </ul>
+                    </article>
+                    <article>
+                        <h2>External resources</h2>
+                        <p>Below are some links to useful resources <strong>outside</strong> of Khan Academy</p>
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/" title="Mozilla Developer Network" target="_blank">MDN</a> - a great resource for JavaScript, HTML and CSS</li>
+                            <li><a href="https://www.w3schools.com/" title="w3schools" target="_blank">w3schools</a> - a great resource for JavaScript, HTML and CSS</li>
+                            <li><a href="https://natureofcode.com/book/preface" title="The Nature of Code" target="_blank">The Nature of Code</a> - by Daniel Shiffman</li>
+                            <!--<li><a href="#" title="" target="_blank">link</a></li>-->
+                        </ul>
+                    </article>
+                </section>
+            </div> <!--resources-->
+            <div id="teams" class="page">
+                <div class="icon-div"><h1 class="heading">Teams</h1><span class="material-icons">people</span></div>
+                <article>
+                    <nav>
+                        <ul class="nav">
+                            <li id="BuzzawButton"><a href="https://www.khanacademy.org" onClick="setupAvatars('Buzzaw');return false;" title="Buzzaw">Buzzaw</a></li>
+                            <li id="CloudlarkButton"><a href="https://www.khanacademy.org" onClick="setupAvatars('Cloudlark');return false;" title="Cloudlark">Cloudlark</a></li>
+                            <li id="IcicleButton"><a href="https://www.khanacademy.org" onClick="setupAvatars('Icicle');return false;" title="Icicle">Icicle</a></li>
+                            <li id="MantattackButton"><a href="https://www.khanacademy.org" onClick="setupAvatars('Mantattack');return false;" title="Mantattack">Mantattack</a></li>
+                            <li id="MountaintopButton"><a href="https://www.khanacademy.org" onClick="setupAvatars('Mountaintop');return false;" title="Mountaintop">Mountaintop</a></li>
+                            <li id="PyroachButton"><a href="https://www.khanacademy.org" onClick="setupAvatars('Pyroach');return false;" title="Pyroach">Pyroach</a></li>
+                            <li id="TerratriceButton"><a href="https://www.khanacademy.org" onClick="setupAvatars('Terratrice');return false;" title="Terratrice">Terratrice</a></li>
+                        </ul>
+                    </nav><!-- -->
+                    <div id="teamName"></div>
+                    <div id="avatarsTable"></div>
+                </article>
+            </div> <!--teams-->
+            <div id="scores" class="page">
+                <div class="icon-div"><h1 class="heading">Team Scores</h1><span class="material-icons">equalizer</span></div>
+                <article>
+                    <p>Belows is a list of the teams, # members, their current points, plus a link to the team homepage.</p>
+                    <div id="scoresTable"></div>
+                </article>
+            </div> <!--scores-->
+            <div id="participants" class="page">
+                <article id="participants-dropdown">
+                    <div id="participants-filter-team" class="dropdown">
+                        <button class="dropdown-button">Filter by Team</button>
+                        <div class="dropdown-content">
+                            <a href="https://www.khanacademy.org" onClick="filterMembers('team', '');return false;" title="Show all">Show all</a>
+                            <a href="https://www.khanacademy.org" onClick="filterMembers('team', 'Buzzaw');return false;" title="Buzzaw">Buzzaw</a>
+                            <a href="https://www.khanacademy.org" onClick="filterMembers('team', 'Cloudlark');return false;" title="Cloudlark">Cloudlark</a>
+                            <a href="https://www.khanacademy.org" onClick="filterMembers('team', 'Icicle');return false;" title="Icicle">Icicle</a>
+                            <a href="https://www.khanacademy.org" onClick="filterMembers('team', 'Mantattack');return false;" title="Mantattack">Mantattack</a>
+                            <a href="https://www.khanacademy.org" onClick="filterMembers('team', 'Mountaintop');return false;" title="Mountaintop">Mountaintop</a>
+                            <a href="https://www.khanacademy.org" onClick="filterMembers('team', 'Pyroach');return false;" title="Pyroach">Pyroach</a>
+                            <a href="https://www.khanacademy.org" onClick="filterMembers('team', 'Terratrice');return false;" title="Terratrice">Terratrice</a>
+                        </div>
+                    </div>
+                    <div id="participants-filter-level" class="dropdown">
+                        <button class="dropdown-button">Filter by Level</button>
+                        <div class="dropdown-content">
+                            <a href="https://www.khanacademy.org" onClick="filterMembers('level', '');return false;" title="Show all">Show all</a>
+                            <a href="https://www.khanacademy.org" onClick="filterMembers('level', 0);return false;" title="Level 0">Level 0</a>
+                            <a href="https://www.khanacademy.org" onClick="filterMembers('level', 1);return false;" title="Level 1">Level 1</a>
+                            <a href="https://www.khanacademy.org" onClick="filterMembers('level', 2);return false;" title="Level 2">Level 2</a>
+                            <a href="https://www.khanacademy.org" onClick="filterMembers('level', 3);return false;" title="Level 3">Level 3</a>
+                            <a href="https://www.khanacademy.org" onClick="filterMembers('level', 4);return false;" title="Level 4">Level 4</a>
+                        </div>
+                    </div>
+                </article>
+                <div class="icon-div"><h1 class="heading">Participants</h1><span class="material-icons">person</span></div>
+                <article>
+                    <p>Below are the full list of participants in this year's Primavera competition. Use the buttons/headers to filter/sort the list.</p>
+                    <div id="membersTable"></div>
+                </article>
+                
+                <div class="participant-scores-modal"> <!--Participant Scores - Modal-->
+                    <div class="participant-scores-modal-wrapper">
+                        <div id="participant-scores-modal-header"></div>
+                        <div class="participant-scores-modal-content"></div>
+                    </div>
+                </div> <!--modal for participant scores-->
+            
+            </div> <!--participants-->
+            <div id="credits" class="page">
+                <div class="icon-div"><h1 class="heading">Credits</h1><span class="material-icons">bubble_chart</span></div>
+                <section class="credits-articles">
+                    <article>
+                        <h2>Avatars</h2>
+                        <p>Below is a list of the creators of our wonderful avatars.</p>
+                        <ul>
+                            <li>Terratrice, Buzzaw, Plantoid, and Mountaintop by <a href="https://www.khanacademy.org/profile/kaid_927326040770070596142214" title="Anthony Mullan">Anthony Mullan</a></li>
+                            <li>Pyroach and Mantattack by <a href="https://www.khanacademy.org/profile/klikijawa2" title="klíkí αvєnír">klíkí αvєnír</a></li>
+                            <li>Cloudlark by <a href="https://www.khanacademy.org/profile/nonpirate" title="Non-Pirate">Non-Pirate</a></li>
+                            <li>Icicles by unknown</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h2>Contest Creator</h2>
+                        <ul>
+                            <li><a href="https://www.khanacademy.org/profile/kaid_1167371439589851086940548" target="_blank" title="Iron Programming">Iron Programming</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h2>Website design/creation</h2>
+                        <ul>
+                            <li><a href="https://www.khanacademy.org/profile/kaid_1167371439589851086940548" target="_blank" title="Iron Programming">Iron Programming</a></li>
+                            <li><a href="https://www.khanacademy.org/profile/kaid_639291037700385781852565" target="_blank" title="Gray Wolf">Gray Wolf</a></li>
+                        </ul>
+                    </article>
+                </section>
+            </div> <!--credits-->
+        </main>
+        <div class="content"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script>
+            //sets the initial home page as visible
+            $(".page").css({
+    		    display: "none"
+    		});
+    		$("#home").css({
+    			display: "block"
+    		});
+    		
+    		//handles the hiding/showing of pages
+    		var swichPage = function (page){
+    			$(".page").css({
+    				display: "none"
+    			});
+    			$(page).css({
+    				display: "block"
+    			});
+    			
+    			$(".page").removeClass('showPage');
+                $(page).addClass('showPage');
+    
+    			$('header nav li').removeClass('active');
+                $(page+"Button").addClass('active');
+    		};
+            
+            //name for each index in the participant points array
+            var pointsMatrix = [
+                "Challenge 2",
+                "Challenge 3",
+                "Challenge 4",
+                "Challenge 5",
+                "Mini Challenge 1",
+                "Mini Challenge 2",
+                "Mini Challenge 3",
+                "Challenge 6",
+                "Challenge 7",
+                "Challenge 8"
+            ];
+            
+            //list of the primavera teams including homepage links
+            var teams = [
+                // Buzzaw
+                {
+                    name: "Buzzaw",
+                    description: "Fierce and competitive and as its name is, the Buzzaw avatar is a representation of loyalty, strength, and courage. For it is like a dog, he will be loyal to the end, he will fight for his master, and never hurt him. But, if anyone/anything stands in their way, with be knocked down, or cut through swiftly. As their name is, the Buzzaw, looks like an animal made of saws.<br>They love to eat the Mountaintop's because they're so easy to catch, but, every now and then, Buzzaws make friends with Terratrices and Cloudlarks, who help them survive. The Cloudlarks break down the Icicle, then they feed it to some young Buzzaws, Terratrices or Cloudlarks. The Terratrice breaks down the Mountaintop and feeds it to the growing children. The Buzzaw will attack the Mountaintops and they do the same as the others.<br>Afterward, once all the children are fed, the Buzzaws, Terratrices, and the Cloudlarks feed themselves. If a Mountaintop is too big for the Terratrice, the Buzzaw, will help fight it. The average female Buzzaw will lay up to 4-8 eggs a year. Then she eats as much food as she can because she can't leave the eggs alone - for fear of them not hatching due to the cold. After three weeks, they hatch and the creatures help them grow. Soon, after one month, they fully grow, then mate and the cycle repeats. The Buzzaws always stay together for safety because, an icicle can sneak up, and attack a Buzzaw. The Buzzaws even have a safety call. If one is attacked, it will run one of it's saw blades, which make a zzzzzzz sound which calls the other Buzzaws.",
+                    home: "team-buzzaw-homepage-reupload/6357266764546048",
+                    points: [23, 22, 8, 22, 0, 0, 0, 0, 0, 0],
+                    participants: [
+                        {
+                            name: "TheChosenOne",
+                            points: [0, 0, 0, 2.5, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "King Scrubby",
+                            points: [0, 0, 3, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_1104533154664392039557822"
+                        },
+                        {
+                            name: "𝕬𝖚𝖉𝖆𝖈𝖎𝖔𝖚𝖘𝕺𝖓𝖊",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_977569129554951715455957"
+                        },
+                        {
+                            name: "Masked Mr. Saturn...",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_913293193505815164458543"
+                        },
+                        {
+                            name: "👻Ghostie👻 ™",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_433031804029947521402544"
+                        },
+                        {
+                            name: "Cipher",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_647010632417158528330530"
+                        },
+                        {
+                            name: "Sesca",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_1193862630506483312690554"
+                        },
+                        {
+                            name: "SP",
+                            points: [5.5, 4.5, 6.5, 5.5, 3.5, 5.5, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_1154433418082391458150393"
+                        },
+                        {
+                            name: "Diamond Programmer",
+                            points: [0, 0, 1.5, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_29002786364239503240680"
+                        },
+                        {
+                            name: "The Blue Pineapple",
+                            points: [5, 3.5, 3, 4.5, 3.5, 3.5, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_787534676066097534114056"
+                        },
+                        {
+                            name: "T☢xic™",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_705963520981801422778602"
+                        },
+                        {
+                            name: "Tutorials for You",
+                            points: [0, 5.5, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_457678322839658052032706"
+                        },
+                        {
+                            name: "Madison!TTOP",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        },
+                        {
+                            name: "WeirdThings",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_682893875431304372919534"
+                        },
+                        {
+                            name: "Cherry Blossom 🌸",
+                            points: [4.5, 2.5, 2.5, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_170527306310924227609056"
+                        },
+                        {
+                            name: "HuiHili11",
+                            points: [6, 4, 0, 2.5, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_345455551334611942928929"
+                        },
+                        {
+                            name: "Cloud Strife",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_1124431348594045848353230"
+                        },
+                        {
+                            name: "woolstone",
+                            points: [0, 3.5, 3, 3, 2, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_914766609625502144148580"
+                        },
+                        {
+                            name: "J.Ramirez",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_357239450834392287133693"
+                        },
+                        {
+                            name: "red monster",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "jaydon.anderson",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: ""
+                        },
+                        {
+                            name: "Fantastickill7",
+                            points: [6.5, 6 + 5, 6, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "🎮DɾεωAιιαɾd2007🎮",
+                            points: [3.5, 5.5, 3, 4, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_684833401615453910684755"
+                        },
+                        {
+                            name: "DabbersTheCat99",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_1089707322613684744693771"
+                        },
+                        {
+                            name: "Naeem203",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "Red dragon",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: ""
+                        },
+                        {
+                            name: "~NEWNINJA~",
+                            points: [7, 6.5, 6.5, 7.5, 0, 5.5, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_603304270920771144926385"
+                        },
+                        {
+                            name: "ZG Animations",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_479290251927233350563121"
+                        },
+                        {
+                            name: "alex walnum",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_212668360926634428991159"
+                        },
+                        {
+                            name: "BugWarrior",
+                            points: [6.5, 8.5 + 5, 5.5, 5.5, 3.5, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_689041202483677885792121"
+                        },
+                        {
+                            name: "Pangee Inventing Studios",
+                            points: [0, 5.5, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_164656278642270996826170"
+                        },
+                        {
+                            name: "Omay",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_223246379631323621203513"
+                        },
+                        {
+                            name: "Uqia",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "Leviathan Programming",
+                            points: [6, 7, 6.5, 6.5, 2.5, 5.5, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_1111587369709668626687999"
+                        },
+                        {
+                            name: "E.A.B",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_982981152636279468575308"
+                        },
+                        {
+                            name: "𝕴'𝖒_𝕭𝖔𝖆𝖗𝖉!",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_533477355612483424015194"
+                        },
+                        {
+                            name: "ninjaironjoe",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: ""
+                        },
+                        {
+                            name: "xacer",
+                            points: [8.5, 7.5, 7.5, 8, 5.5, 6.5, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_936620259368561719366955"
+                        }
+                    ],
+                    avatars: [
+                        "buzzaw-avatar-0/5808513804812288/4504371379060736.png",
+                        "buzzaw-1/6206856175435776/5925381198725120.png",
+                        "buzzaw-2/4660240666738688/5786140573581312.png",
+                        "buzzaw-3/5157957381799936/6283857288642560.png",
+                        "buzzaw-4/4623661504020480/5749561410863104.png",
+                        "buzzaw-team-image/5792255105449984/6355205058871296.png"
+                    ]
+                },
+                // Cloudlark
+                {
+                    name: "Cloudlark",
+                    description: "Cloudlarks (scientific name: avum nubes) are majestic creatures that soar through the clouds. On average, they are about 6 feet tall, but some of the more impressive specimens can get as tall as 9 feet. They are covered in a thick layer of feathers that keep them warm despite the extreme temperatures of the sky.<br>They build nests in large tunnels in the clouds and live in large family groups. In order to be considered an adult, a young cloudlark must gain the tribe’s respect by flying around the world or killing an adult icicle. The rare few that achieve both are often the leaders of their group.<br>Though usually peaceful, they will fight viciously if their young are threatened. Ultimate cloudlarks can create tornadoes of wind that rip apart attacking forces. One cloudlark legend claims that a great titan cloudlark summoned a hurricane that destroyed an entire army of attacking Manattacks. Most Cloudlarks will not attack unless threatened, but they are definitely not to be underestimated.",
+                    home: "cloudlark-home-page/6144632438931456",
+                    points: [22, 27, 8, 19, 0, 0, 0, 0, 0, 0],
+                    participants: [
+                        {
+                            name: "White Tiger",
+                            points: [0, 0, 2.5, 2.5, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        },
+                        {
+                            name: "Jaywin",
+                            points: [0, 7.5 + 5, 0, 0, 4, 5.5, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_486260866329528782507655",
+                        },
+                        {
+                            name: "Kalmar Wingfeather",
+                            points: [0, 4, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_76237113018376973123146"
+                        },
+                        {
+                            name: "Monster Masher",
+                            points: [0, 0, 5.5, 5, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_772663863807893217596957"
+                        },
+                        {
+                            name: "MadLamdan",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_899274464866705911939317"
+                        },
+                        {
+                            name: "vaporwavefurret",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_1108546017902588758036660"
+                        },
+                        {
+                            name: "Ollie",
+                            points: [0, 0, 0, 7, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_1126516421561536754759926"
+                        },
+                        {
+                            name: "💜 Beatrice S. 💜",
+                            points: [2.5, 3.5, 4.5, 2, 1.5, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_802686983899378875225304"
+                        },
+                        {
+                            name: "Addison Frank",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_1065609267194792453430087"
+                        },
+                        {
+                            name: "max",
+                            points: [6, 6, 5, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_891889292570639298903483"
+                        },
+                        {
+                            name: "amberallard2006",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_1112686120861942434881694"
+                        },
+                        {
+                            name: "Nuclear Coding",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_396225920986211203654523"
+                        },
+                        {
+                            name: "SamWise",
+                            points: [1.5, 5, 3, 3, 1, 2, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_659800661397715681487277"
+                        },
+                        {
+                            name: "𝐓𝐡𝐞 #𝟐 𝐃𝐫𝐚𝐠𝐨𝐧 𝐏𝐫𝐨𝐩𝐨𝐧𝐞𝐧𝐭",
+                            points: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_311294474374255098291309"
+                        },
+                        {
+                            name: "heal01",
+                            points: [5, 0, 5, 0, 0, 5, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_442925512118832601854151"
+                        },
+                        {
+                            name: "Nick",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_1101615776379227011755545"
+                        },
+                        {
+                            name: "PhantomCoding",
+                            points: [5, 0, 0, 6, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_51279147411004900794153"
+                        },
+                        {
+                            name: "Torus",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_1088685075013843225245914"
+                        },
+                        {
+                            name: "«【𝔸ℝ𝕋𝕀𝕃𝕃𝔼ℝ𝕐⟹ 𝔾𝔸𝕄𝕀𝖭𝔾】»",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_896811017341410761650434"
+                        },
+                        {
+                            name: "ElenaMks",
+                            points: [5.5, 0, 6, 3.5, 3.5, 4.5, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_911523991207738352193173"
+                        },
+                        {
+                            name: "Quinn Hardbrook",
+                            points: [0, 0, 0, 0, 4.5, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_96558739702575557799545"
+                        },
+                        {
+                            name: "Roland184",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_576605215535074736397767"
+                        },
+                        {
+                            name: "🤑TheMoneyLord🤑",
+                            points: [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "Redstone Kid",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "Aiden",
+                            points: [0, 5, 0, 6.5, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_178940427431269616113086"
+                        },
+                        {
+                            name: "MidnightCoder",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        },
+                        {
+                            name: "CaigePrograms",
+                            points: [0, 5, 5, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_464036545140493160818164"
+                        },
+                        {
+                            name: "Ӿɛהּσהּ",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_1088685075013843225245914"
+                        },
+                        {
+                            name: "lkdsjf",
+                            points: [8.5, 0, 0, 0, 0, 5, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_402988714820804282735090"
+                        },
+                        {
+                            name: "🆃🅷🅴■🆂🅲🆈🆃🅷🅴",
+                            points: [0, 0, 8.5 + 3, 6.5, 0, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_264451399463857901682400"
+                        },
+                        {
+                            name : "#𝟙 𝔻𝕣𝕒𝕘𝕠𝕟 ℙ𝕣𝕠𝕡𝕠𝕟𝕖𝕟𝕥",
+                            points: [0, 4, 2, 4, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_484117643190644384819741"
+                        },
+                        {
+                            name: "Jedidiah",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        },
+                        {
+                            name: "the official program tester",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "6Q",
+                            points: [6, 0, 4.5, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_1203254349917608655460142"
+                        },
+                        {
+                            name: "Cat8888",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_305271040548219346512431"
+                        },
+                        {
+                            name: "byrondmaxwell",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_764332480006219880168139"
+                        },
+                        {
+                            name: "No Name",
+                            points: [0, 6, 6, 6, 4, 5.5, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "Rnbean",
+                            points: [2.5, 6, 3.5, 4.5, 2.5, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_981411569149135670002061"
+                        },
+                        {
+                            name: "Explosion Programming",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_17176756408447114648058"
+                        },
+                        {
+                            name: "BB-8",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_79492645558798574591143"
+                        }
+                    ],
+                    avatars : [
+                        "cloudlark-avatar-0/4655361290289152/6111520694091776.png",
+                        "cloudlark-1/4763131591147520/5889031497990144.png",
+                        "cloudlark-2/6008228769054720/5445278815633408.png",
+                        "cloudlark-3/6333225337241600/4925850453688320.png",
+                        "cloudlark-4/4837012729380864/5962912636223488.png",
+                        "cloudlark-team-image/5015008664764416/6140908571607040.png"
+                    ]
+                },
+                // Icicle
+                {
+                    name: "Icicle",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    home: "icicle-homepage/4518595804282880",
+                    points: [23, 22, 6, 11, 0, 0, 0, 0, 0, 0],
+                    participants: [
+                        {
+                            name: "Bendy the Cartoon Devil",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_146321172275603141369709"
+                        },
+                        {
+                            name : "Mamura",
+                            points: [0, 0, 5.5, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_929615991751279728249439"
+                        },
+                        {
+                            name: "Dandelion Fire Coding",
+                            points: [5.5, 5, 7, 3, 5 * 2, 5.5, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_565064446382644511974643"
+                        },
+                        {
+                            name: "BrainBrainSmartSmart",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_1110436669114884321619313"
+                        },
+                        {
+                            name: "Cosmic Coding",
+                            points: [0, 0, 0, 4, 4, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_872573289398858692943057"
+                        },
+                        {
+                            name: "Arrowhead Co.",
+                            points: [9, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_1088841568924126317052037"
+                        },
+                        {
+                            name: "tla98",
+                            points: [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_388139661239132194487420"
+                        },
+                        {
+                            name: "Eric",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_783146703471696540623752"
+                        },
+                        {
+                            name: "102204",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_331157026896441104143495"
+                        },
+                        {
+                            name: "Paהda (the1panda)",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_335416803102312184951714"
+                        },
+                        {
+                            name: "JentGent",
+                            points: [0, 0, 0, 7, 5.5 * 2, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_1111444645373975142506044"
+                        },
+                        {
+                            name: "PICKLEMASTER",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_89977065444589746828431"
+                        },
+                        {
+                            name: "hyunjinsong5",
+                            points: [0, 0, 0, 4, 3, 2.5, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_690038647920219500147844"
+                        },
+                        {
+                            name: "SimonNguyen132841",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_20264360366379685648512"
+                        },
+                        {
+                            name: "Glitch3r (CCC)",
+                            points: [0, 4, 4.5, 6, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_755718554958714739159343"
+                        },
+                        {
+                            name: "ǤЖ",
+                            points: [7, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_402317373472622403640722"
+                        },
+                        {
+                            name: "Noah H.",
+                            points: [8, 5.5, 6, 7.5, 3, 5.5, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_1121453835893982129568101"
+                        },
+                        {
+                            name: "AquA217",
+                            points: [6, 5.5, 6, 8.5 + 3, 4, 5.5, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_794864070338193862176253"
+                        },
+                        {
+                            name: "The Anonymous",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_229533926594864627945262"
+                        },
+                        {
+                            name: "The evil hacker",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_1034837819165755246772044"
+                        },
+                        {
+                            name: "ProgramLover",
+                            points: [0, 0, 5, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_3247765052548666528671"
+                        },
+                        {
+                            name: "JS_The_Programmer_Art",
+                            points: [0, 5, 5.5, 2.5, 3, 3, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_372618120741738648924349"
+                        },
+                        {
+                            name: "R13k",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_612170788949678741616671"
+                        },
+                        {
+                            name: "Pippin (┬┬﹏┬┬) ",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_270022915183035272874685"
+                        },
+                        {
+                            name: "𝕮𝖞𝖇𝖊𝖗𝖂𝖔𝖑𝖋",
+                            points: [0, 3, 4, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_1172711673134691260881313"
+                        },
+                        {
+                            name: "Timothy",
+                            points: [6.5, 4, 6.5, 4, 4, 4.5, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_580436051254509721948310"
+                        },
+                        {
+                            name: "🖤 Black_Flame🖤",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_1086742115637246950998641"
+                        },
+                        {
+                            name: "silvanus1",
+                            points: [0, 0, 0, 0, 1.5, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_528231570447517164906747"
+                        },
+                        {
+                            name: "M.Murray",
+                            points: [0, 2, 3, 1, 1.5, 3, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_362854670329721929469736"
+                        },
+                        {
+                            name: "Frost",
+                            points: [6, 7, 6.5, 5.5, 2, 5, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_770553674524080886285792"
+                        },
+                        {
+                            name: "LIGHTFURY",
+                            points: [0, 0, 5, 3, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_253675883994860334543684"
+                        },
+                        {
+                            name: "Timotei123",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_1094122175827539431824064"
+                        },
+                        {
+                            name: "The Hydrogen Bomb",
+                            points: [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_1025315229639221216978690"
+                        },
+                        {
+                            name : "𝕮𝖔𝖓𝖈𝖚𝖘𝖘𝖎𝖔𝖓",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_136396438004064322887028"
+                        },
+                        {
+                            name: "MKSila",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_413431538544833256205015"
+                        },
+                        {
+                            name: "☆LivinMyLife☆",
+                            points: [4, 0, 4.5, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: ""
+                        },
+                        {
+                            name: "ColdStrike",
+                            points: [0, 2.5, 0, 3, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_724404576266510675028882"
+                        },
+                        {
+                            name: "The Viper Programmer",
+                            points: [0, 2, 0, 1.5, 1.5, 1, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_666273106907823194999506"
+                        },
+                        {
+                            name: "Panth3r",
+                            points: [5.5, 2.5, 1.5, 2.5, 0, 4, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_817237411924413389297036"
+                        },
+                        {
+                            name: "NoVa4win",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_822664435827414310261455"
+                        },
+                        {
+                            name: "ℭʘℛｪƝ ℱｪϟƬ",
+                            points: [0, 6.5, 6, 4, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_900163032076602341489733"
+                        },
+                        {
+                            name: "A.L.",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        }
+                    ],
+                    avatars: [
+                        "icicle-avatar-0/4990005747531776/6369820765470720.png",
+                        "icicle-1/5861691464237056/5298741510815744.png",
+                        "icicle-2/6728436869644288/4529413614092288.png",
+                        "icicle-3/5400751413280768/4697063971504128.png",
+                        "icicle-4/5092526457503744/6218426364346368.png",
+                        "icicle-team-image/5150326508371968/6276226415214592.png"
+                    ]
+                },
+                // Mantattack
+                {
+                    name: "Mantattack",
+                    description: "Mantattacks are born underwater. Their parents don't need to protect them, because they build small, non-visible, nests that are about two feet wide. After they grow up, they can leave the water to get more food. Mantattacks grow up after in between 20-30 years, during which time they have to complete two tasks- killing a shark for the adults, and fighting an adult Terratrice. As seen by their maturity, Mantattacks can live very long, longer than even Terratrices. Mantattacks usually stay underwater, but there is a legend of a Mantattack army attempting to save one of their loyal Icicle friends from the Buzzsaws, Cloudlarks, and Terratrices, although the mission ultimately failed. Due to their isolation, Mantattacks do not have any way of telecommunication.",
+                    home: "mantattack-logo-wip/5664966521405440",
+                    points: [20, 27, 9, 18, 0, 0, 0, 0, 0, 0],
+                    participants: [
+                        {
+                            name: "guavadude",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_899736349604719719825125"
+                        },
+                        {
+                            name: "Mojo1000",
+                            points: [0, 5, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_194923392893158063997634"
+                        },
+                        {
+                            name: "ZeeJay",
+                            points: [0, 0, 0, 6.5, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_1086461279125886617845231"
+                        },
+                        {
+                            name: "EthanDaBoss",
+                            points: [0, 0, 0, 6.5, 4.5, 5, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_757154916814989082143771"
+                        },
+                        {
+                            name: "Faith G",
+                            points: [0, 0, 0, 3.5, 2.5, 4.5, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_1088601017819310502988695"
+                        },
+                        {
+                            name : "🏈🏆Tommy Nguyen🏆🏈",
+                            points: [0, 3, 2.5, 4, 2, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_401269707592102117459835"
+                        },
+                        {
+                            name: "Bluebird",
+                            points: [0, 0, 0, 7.5, 5, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_157624541333313939750668"
+                        },
+                        {
+                            name: "thelegoless",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_653913542668730855066457"
+                        },
+                        {
+                            name: "TheSwordsman",
+                            points: [0, 0, 0, 1.5, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_12753210340490422984394"
+                        },
+                        {
+                            name: "rororoyourboat57",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_593083809003562767602721"
+                        },
+                        {
+                            name: "Paperwad",
+                            points: [0, 0, 0, 7, 5, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_1161636173501911064328685"
+                        },
+                        {
+                            name: "lazarlazar",
+                            points: [0, 0, 5, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_1038383432510544864217430"
+                        },
+                        {
+                            name: "Phantom Falcon",
+                            points: [5.5, 7.5, 6.5, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_1042009894132225686810694"
+                        },
+                        {
+                            name: "Purple Coding Co./Benji Doerr",
+                            points: [0, 6.5, 6.5, 0, 4, 4, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_996007254133195436592360"
+                        },
+                        {
+                            name: "The Spartan",
+                            points: [0, 0, 0, 7 + 3, 3.5, 3.5, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_1169025940501780065143252"
+                        },
+                        {
+                            name: "G83",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_307227914637747058027495"
+                        },
+                        {
+                            name: "Izzy Ecoff",
+                            points: [3, 0, 5, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_386059397408496920259605"
+                        },
+                        {
+                            name: "Coder.",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        },
+                        {
+                            name: "Blaze Programming",
+                            points: [6.5, 6, 7.5 + 3, 8.5 + 3, 4.5, 6.5, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_734400195783650113649572"
+                        },
+                        {
+                            name: "SeventyStars",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "RoosterMiller",
+                            points: [4, 0, 0, 0, 2, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_611237292245129201396635"
+                        },
+                        {
+                            name: "Kay",
+                            points: [3, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_565263295534660511994296"
+                        },
+                        {
+                            name: "CorNation",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "YaBoiBen",
+                            points: [4, 3, 2.5, 6, 3.5, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_1175002299606711660354616"
+                        },
+                        {
+                            name: "tea cup :D",
+                            points: [3, 0, 3.5, 4, 3.5, 4, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_923404609803055230971787"
+                        },
+                        {
+                            name: "KaiNalu6",
+                            points: [2, 5, 6, 2.5, 3, 5.5, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_537860541432520371234571"
+                        },
+                        {
+                            name: "DJ Daba",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        },
+                        {
+                            name: "TheUnderratedProgrammer",
+                            points: [0, 0, 3, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_923470279309986828488314"
+                        },
+                        {
+                            name: "Grace and Gityalila",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_547620112972655231391460"
+                        },
+                        {
+                            name: "Iron Man",
+                            points: [8, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_536717599306279853597107"
+                        },
+                        {
+                            name: "anglefang367",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_517267181868840619101288"
+                        },
+                        {
+                            name: "Julius Welch",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: ""
+                        },
+                        {
+                            name: "Donald Trump 2.0",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        },
+                        {
+                            name: "Lost Bob",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_463427729263455113107749"
+                        },
+                        {
+                            name: "Bryan Huang",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: ""
+                        },
+                        {
+                            name: "Bowdoin498",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        },
+                        {
+                            name: "Leo Tadarashi",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_983628910876769456347779"
+                        },
+                        {
+                            name: "kru.gatewood",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        },
+                        {
+                            name: "Derek.J.Marquardt",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "jack.weyant",
+                            points: [5.5, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_130055668799827424383586"
+                        },
+                        {
+                            name: "Point",
+                            points: [6, 4, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_739097480569639482329372"
+                        },
+                        {
+                            name : "𝕽𝖔𝖇𝖊𝖗𝖙 𝕭𝖎𝖓𝖞𝖆𝖗𝖉𝖔",
+                            points: [7, 0, 4.5, 0, 0, 0, 0, 0, 0, 0],
+                            rank : 4,
+                            kaid: "kaid_1060875410762207111484945"
+                        },
+                        {
+                            name: "Rujuta Mhaswade",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        }
+                    ],
+                    avatars: [
+                        "mantattack-avatar-0/6166360447139840/6386312097710080.png",
+                        "mantattack-1/6685273454952448/4539026757533696.png",
+                        "mantattack-2/5809208004067328/5246258050646016.png",
+                        "mantattack-3/5165053003317248/6290952910159872.png",
+                        "mantattack-4/6666884753801216/6012051625492480.png",
+                        "mantattack-team-image/5295283181338624/5013808204627968.png"
+                    ]
+                },
+                // Mountaintop
+                {
+                    name: "Mountaintop",
+                    description: "As the name suggests, this avatar thrives in the mountains, especially large ones-- they also like the cold.<br>Living in tunnels and caverns that it creates with it digging claws, an adult Mountaintop (and their nest) can be found in a large cavern, usually near the crest of the mountain.<br>It hibernates in the winter by making a special hibernation tunnel that they will close themselves in.<br><Br>The most dangerous thing for a Mountaintop are the Buzzsaw avatars, who lie in wait for an unsuspecting digging Mountaintop. (Buzzsaw's blades can cut through Mountaintop's thick, stonelike skin.) <br> Mountaintop avatars rarely visit the surface, but sometimes the young ones wander up and get caught by a Terratrice. (The adults are too big for Terratrice to carry effectively). <br>The Icicle avatars also like the cold, and the mountaintop avatar may occasionally make a meal of them. <br> (Not the trees or ultimate though, as they are too large and able to fight back). <br> However, Mountaintop avatars have been known to occasionally make friends with an Icicle-- which helps create the perfect environment for them both.<br>Protecting the mountaintop from Terratrice, and buzzsaw-- (icicle is so cold that Buzzsaw's blade can shatter on impact with one, and Terratrice don't like picking up spikey rocks (icicle riding a mountaintop).)<br>While also protecting the Icicle from any other Mountaintop, or Cloudlark (who don't mind the spikes due to their cloudlike nature).<Br>Mountaintop avatars are laid in eggs usually in groups of 3-7.<br>As soon as the female lays the eggs she leaves them secure under the surface never to see them again. After that, they forge on their own for the rest of their lives.<br>A group of mountaintop avatars is called a tremor, due to the tremors they cause while digging.",
+                    home: "i/4692275855376384",
+                    points: [21, 23, 8, 20, 0, 0, 0, 0, 0, 0],
+                    participants: [
+                        {
+                            name: "LeaferStudios",
+                            points: [0, 0, 0, 0, 3.5, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_553656479258879622339276"
+                        },
+                        {
+                            name: "Quantum Coding",
+                            points: [0, 0, 0, 0, 5 * 2, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_594977800467193704360854"
+                        },
+                        {
+                            name: "Paul Schevikhoven",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_507338169976479905484492"
+                        },
+                        {
+                            name: "💵𝕻𝖗𝖔𝖈𝖗𝖆𝖘𝖙𝖎𝖓𝖆𝖙𝖔𝖗 𝕾𝖙𝖚𝖉𝖎𝖔𝖘💵",
+                            points: [0, 0, 4, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_358532937572478172007805"
+                        },
+                        {
+                            name: "Nazmus Saadat",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_493860524701157352380650"
+                        },
+                        {
+                            name : "Prodigious Learner",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_1128457916452792754498681"
+                        },
+                        {
+                            name: "lschumac000",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        },
+                        {
+                            name: "CtmGamer",
+                            points: [0, 0, 0, 6.5, 4, 6, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_680149812623529957566993"
+                        },
+                        {
+                            name: "Eragon Blaze",
+                            points: [7.5, 7.5, 7, 5, 3.5, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_515350569649156706672996"
+                        },
+                        {
+                            name: "Winston",
+                            points: [0, 0, 4.5, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_66098262377513172559095"
+                        },
+                        {
+                            name: "meepo",
+                            points: [3, 3.5, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_638986310752175675382359"
+                        },
+                        {
+                            name: "Harry Le",
+                            points: [4, 5.5, 4, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_1041597184494169228230804"
+                        },
+                        {
+                            name: "Legowar || Thrawn",
+                            points: [6, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_1105847417331548479022978"
+                        },
+                        {
+                            name: "🔥The Fire Programmer🔥",
+                            points: [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_317248493772116009886527"
+                        },
+                        {
+                            name: "ℱire Programmer",
+                            points: [3, 2.5, 4, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_966740337367540339538541"
+                        },
+                        {
+                            name: "ENDER HAVEN",
+                            points: [7, 7, 8, 7, 0, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_695815145499520334362079"
+                        },
+                        {
+                            name: "CreativeCoding",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_773332687198894831229744"
+                        },
+                        {
+                            name: "Legolordoftherings",
+                            points: [0, 3.5, 4.5 + 3, 4 + 3, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_735818314787020945585419"
+                        },
+                        {
+                            name: "𝕵𝖒𝖆𝖓557",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_867355420590681704481655"
+                        },
+                        {
+                            name : "brownie",
+                            points: [3, 0, 6, 5, 1, 0, 0, 0, 0, 0],
+                            rank : 1,
+                            kaid: "kaid_291077725524570819424194"
+                        },
+                        {
+                            name: "Krypton Coding",
+                            points: [0, 5.5, 5.5, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_741456837204053941087108"
+                        },
+                        {
+                            name: "Elizabeth Cronnell",
+                            points: [0, 0, 0, 0, 2, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_697469527954268308857264"
+                        },
+                        {
+                            name: "Magdalen311",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "Varun W.",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "Cluttered Mind",
+                            points: [0, 7, 6.5, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_348402548921034759723864"
+                        },
+                        {
+                            name: "Little Moose",
+                            points: [7, 7.5, 8.5, 8 + 3, 5, 5, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_705925867208151877881149"
+                        },
+                        {
+                            name: "Tøm Crøññêll",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: ""
+                        },
+                        {
+                            name: "lazerlegendy s",
+                            points: [4, 4.5, 4.5, 3, 2, 3, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_1072657280957966329034250"
+                        },
+                        {
+                            name: "Shadow Ghost",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_108351936841804272337928"
+                        },
+                        {
+                            name: "KasCode",
+                            points: [3.5, 7, 0, 7, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_267183619175875183325281"
+                        },
+                        {
+                            name: "🀄Toothless1🀄",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        },
+                        {
+                            name: "Mr. Ugly",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_1098444464855085151221239"
+                        },
+                        {
+                            name: "Classified",
+                            points: [5.5, 5.5, 6, 0, 3, 4, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_200170237971001069479684"
+                        },
+                        {
+                            name: "Gravekeeper150",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_360967820042428637619405"
+                        },
+                        {
+                            name: "Reid Newbre",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_387899105459485948198260"
+                        },
+                        {
+                            name: "Aidan",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_385069798343264789853885"
+                        },
+                        {
+                            name: "swensaar",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_983628910876769456347779"
+                        },
+                        {
+                            name: "Sawyer",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        }
+                    ],
+                    avatars: [
+                        "mountaintop-avatar-0/6555252622639104/6650359036264448.png",
+                        "mountaintop-1/5727328982417408/5164379028996096.png",
+                        "mountaintop-2/4699711751733248/5825611658575872.png",
+                        "mountaintop-3/6578058588995584/4748471240376320.png",
+                        "mountaintop-4/4910470125469696/6036370032312320.png",
+                        "mountaintop-team-image/5675541818654720/5112591865233408.png"
+                    ]
+                },
+                // Pyroach
+                {
+                    name: "Pyroach",
+                    description: "Pyroaches are fiery creatures, when they group together it is called a blaze; their combined heat can burn anything in a 10-mile radius. Excluding Buzzaws and Cloudlarks because of their heat resistance. Their main predators are Buzzaws and Terratrice. A Terratrice will take the little ones and scoop them into the water; sometimes Mantatacks will take the Pyroach from the tongs of the Terratrice and consume it selfishly. Buzzaws will slice up Pyroaches to eat. A Pyroach's best self-defense is to spit lava in the blades of a Buzzaw; the lava will cool and prevent its blades from spinning.<br>Pyroaches build their nests in the heart of volcanoes, their eggs are laid in magma and hatch in obsidian. The hotter the magma is, the faster the eggs mature. And when hatching is over, they head towards the desert to live until spring arrives.<br>Blazes can host multiple queen/king Pyroaches; They communally assign tasks for hunting, construction, and nesting; keeping everything in order. Although, this higher state can only be achieved by killing a predator (which is hard).<br>Pyroaches eat scavaged minerals and the remains of dead Mountaintops. Pyroaches can’t enter the Mountaintop's environment because of rapid cooling (a vulnerable state). If it does happen, the Pyroach will have to go to a volcano to get their heat back. The Pyroaches will sometimes trade with the Cloudlarks to get berries and other stuff they can’t find.",
+                    home: "team-pyroach/5072740297752576",
+                    points: [15 + 18, 21, 6, 19, 0, 0, 0, 0, 0, 0],
+                    participants: [
+                        {
+                            name : "𝕊𝕡𝕒𝕣𝕜𝕝𝕖 𝕎𝕠𝕝𝕗",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_490733484445561441832728"
+                        },
+                        {
+                            name: "ӨMΛЯ",
+                            points: [0, 5, 2, 3.5, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_466901598061158732699984"
+                        },
+                        {
+                            name: "€Ł€ĆŦŘƗĆ ĐØŁƤĦƗŇ",
+                            points: [4, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_1188776231699286995947997"
+                        },
+                        {
+                            name: "Ben",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_289970902692175607851724"
+                        },
+                        {
+                            name: "RﾑNGER",
+                            points: [0, 0, 5, 6.5, 3.5, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_81611904694744549785683"
+                        },
+                        {
+                            name: "TheUnnamed",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_471384966610845289618804"
+                        },
+                        {
+                            name: "Eclipse Wolfie",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_1161542602657307324716374"
+                        },
+                        {
+                            name: "Mango",
+                            points: [0, 5, 4, 0, 5.5 * 2, 6.5, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_846153203161297518036451"
+                        },
+                        {
+                            name: "Ducky",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_928590468431449808067269"
+                        },
+                        {
+                            name: "NitOwl007",
+                            points: [7, 7.5, 5, 6.5, 5, 6.5, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_607413902639112014082643"
+                        },
+                        {
+                            name: "wolf programming",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_522074584207555028806812"
+                        },
+                        {
+                            name: "Doctor137",
+                            points: [8.5, 7.5, 0, 0, 5, 7, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_1166193792198469906754627"
+                        },
+                        {
+                            name: "homeschoolg wolf",
+                            points: [2, 5.5, 3, 4.5, 3.5, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_245491481254272378662080"
+                        },
+                        {
+                            name: "ƄαƮϻαп",
+                            points: [0, 0, 4.5, 5, 2, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_868483897637767392797231"
+                        },
+                        {
+                            name: "CobraCoding",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_1034151665769103257613952"
+                        },
+                        {
+                            name: "Jacobk06",
+                            points: [0, 5, 3, 4, 3.5, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_1167519667246960589137349"
+                        },
+                        {
+                            name : "Superman6014",
+                            points : [0, 0, 0, 0, 3.5, 5.5, 0, 0, 0, 0],
+                            rank : 4,
+                            kaid: "kaid_967753487844348027928717"
+                        },
+                        {
+                            name : "Subtraction",
+                            points : [0, 0, 0, 5, 3.5, 0, 0, 0, 0, 0],
+                            rank : 2,
+                            kaid: "kaid_676606466824519993549226"
+                        },
+                        {
+                            name: "Gamescanbefun123",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_222902052582908905498419"
+                        },
+                        {
+                            name: "xDESTROYERxOFxWORLDSx",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_1118083405123162035656561"
+                        },
+                        {
+                            name: "【Sophie Weber】",
+                            points: [2.5, 4, 1.5, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_877852913577868411358754"
+                        },
+                        {
+                            name: "Lunar Wolfie",
+                            points: [4, 7, 4, 5.5, 4, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_123102469128561509531031"
+                        },
+                        {
+                            name: "Killer",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_877443146059735458738559"
+                        },
+                        {
+                            name: "Destroyer",
+                            points: [0, 5.5, 7, 6, 4, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_334723797142449046019560"
+                        },
+                        {
+                            name: "FunnyPerson",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_374708177278851342930023"
+                        },
+                        {
+                            name: "Procoder3000",
+                            points: [4, 6, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_99993434330267017427665"
+                        },
+                        {
+                            name: "Ethan M. Sanchez",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_574441393464496384093989"
+                        },
+                        {
+                            name: "Bunnylover0209",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_794580515442110916729640"
+                        },
+                        {
+                            name: "natanaelb",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_587130497329658727150533"
+                        },
+                        {
+                            name: "Agent X",
+                            points: [8, 7, 4.5, 7, 4, 4, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_51518766668545629580011"
+                        },
+                        {
+                            name: "Vulturnus",
+                            points: [7, 6.5 + 5, 7 + 3, 6, 5.5, 6.5, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_737622970740621562808796"
+                        },
+                        {
+                            name: "Şχβ",
+                            points: [0, 0, 0, 0, 1.5, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_106372610440887610379276"
+                        },
+                        {
+                            name: "Gray Wolf",
+                            points: [8.5, 7, 7.5, 7, 4, 6, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_639291037700385781852565"
+                        },
+                        {
+                            name: "Lightpaw",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_980050552541093475401026"
+                        },
+                        {
+                            name: "Sally the Great/TEE",
+                            points: [5, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_38521872531972286519732"
+                        },
+                        {
+                            name: "lilbucket2008YT",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_128176352477101571113883"
+                        },
+                        {
+                            name: "Classic Kid",
+                            points: [3, 3, 1.5, 0, 3, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_1168774361013512472344293"
+                        },
+                        {
+                            name: "Merrie Dodge",
+                            points: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_54390136381927951683389"
+                        }
+                    ],
+                    avatars: [
+                        "pyroach-avatar-0/6179318182723584/5209890544697344.png",
+                        "pyroach-avatar-1/6569290341564416/4777277044572160.png",
+                        "pyroach-avatar-2/5993135376973824/4555131068366848.png",
+                        "pyroach-avatar-3/5494732104679424/5795092321026048.png",
+                        "pyroach-avatar-4/5166461748002816/6371724832292864.png",
+                        "pyroach-team-image/6666600824586240/4625907243433984.png"
+                    ]
+                },
+                // Terratrice
+                {
+                    name: "Terratrice",
+                    description: "The name Terratrice comes from the latin word terra, which means earth. Unlike their name,this large avatar spends most of its time flying. They live on craggy boulders in the tall mountains of Primavera.(Primavera is where all avatars live.) They build nests on moutainpeaks and lay up to two eggs a year, which they raise for six months until the newbies (A newbie is a baby Terratrice.) have grown their wings and are ready to fly away. After a newbie leaves the nest it will start to build its own nest on a nearby cliff. These nests are about five feet in radius!<br>Terratrice are predators and eat small birds and rodents, but will occasionally snatch up a fish or two in the nearby coast. The Terratrice love to fly with the Cloudlark avatars, and will often compete against them in the spring when the Cloudlark migrate to the mountains.<br>The Terratrice avatars are very much centered on community, and love to help each other, and other avatars. They mate for life and live up to 80 years in the wild. The oldest recorded Terratrice was said to be 102 years old! These birds are also surprisingly strong and can lift up to 10 times their own weight.",
+                    home: "-t-e-r-r-a-t-r-i-c-e-/6431129247432704",
+                    points: [15 + 22, 22, 8, 19, 0, 0, 0, 0, 0, 0],
+                    participants: [
+                        {
+                            name: "JOSH",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_785728163611803275719453"
+                        },
+                        {
+                            name: "Red Arrow",
+                            points: [6.5, 7.5, 3.5, 6.5, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_545079319727336092382822"
+                        },
+                        {
+                            name: "Malachi",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_125101298320750606448167"
+                        },
+                        {
+                            name: "Cream",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_695872435156739002959814"
+                        },
+                        {
+                            name: "Stroi Maria Stefania",
+                            points: [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_773350065715841683426301"
+                        },
+                        {
+                            name: "Vortex Ninja",
+                            points: [3, 6.5, 6, 0, 2, 3.5, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_550346113466496832565531"
+                        },
+                        {
+                            name: "Katherine Kwei",
+                            points: [0, 0, 3.5, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_77957719864012553208682"
+                        },
+                        {
+                            name: "The Algorithm",
+                            points: [0, 0, 5, 0, 4, 5.5, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_712162381289007109529259"
+                        },
+                        {
+                            name: "MangelsonHarrison",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        },
+                        {
+                            name: "Lochedragon RisingStudios",
+                            points: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_291161136694103179110475"
+                        },
+                        {
+                            name : "Masterisk",
+                            points: [0, 5.5, 2, 3.5, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_272469301376595443707502"
+                        },
+                        {
+                            name: "DJ_Koala",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_72036686818000477581494"
+                        },
+                        {
+                            name: "Colored Feather 😜",
+                            points: [0, 0, 7 + 3, 3.5, 3, 4, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_1205320995243119760368790"
+                        },
+                        {
+                            name: "Ghost",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        },
+                        {
+                            name: "Mr. JS",
+                            points: [0, 8.5, 0, 6, 4.5, 6, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_394144652208834858857182"
+                        },
+                        {
+                            name: "Mushy Avocado",
+                            points: [0, 8 + 5, 7.5, 6.5, 3.5, 5.5, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_889538221957342292210697"
+                        },
+                        {
+                            name: "mooseh",
+                            points: [0, 4.5, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_562164626395914568934257"
+                        },
+                        {
+                            name: "Blue Blossom",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: ""
+                        },
+                        {
+                            name: "amaalfolakemi",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "BrenErso",
+                            points: [3, 5.5, 5, 4, 3, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_988411186401701354116585"
+                        },
+                        {
+                            name: "Joshua Lindgren",
+                            points: [2, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_1105797304971817256581275"
+                        },
+                        {
+                            name: "Skyla Anderson",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_152851887773401299736736"
+                        },
+                        {
+                            name: "𝓙ø𝓈𝖍",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_788067673698498528675072"
+                        },
+                        {
+                            name: "Jeremy",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_1141793512184771585472360"
+                        },
+                        {
+                            name: "Ninjaboy8888",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: ""
+                        },
+                        {
+                            name: "AlphaWOLF122",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_171682889913780182966376"
+                        },
+                        {
+                            name : "CornerStone",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_80323451172873656278026"
+                        },
+                        {
+                            name: "Fuzzy's Taco Shop",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: ""
+                        },
+                        {
+                            name: "Shantanu Biradar",
+                            points: [2, 6, 0, 3.5, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_676062693351130244134962"
+                        },
+                        {
+                            name: "Xaiden Porter",
+                            points: [0, 0, 0, 6.5, 4.5, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "Kruxe",
+                            points: [7, 8.5, 0, 7.5, 4, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_707142141331024825123680"
+                        },
+                        {
+                            name: "gabe",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: ""
+                        },
+                        {
+                            name: "SuperGamingYT",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 1,
+                            kaid: "kaid_265563400481161150452363"
+                        },
+                        {
+                            name: "Super Mario",
+                            points: [2.5, 6, 2.5, 5.5, 5, 0, 0, 0, 0, 0],
+                            rank: 4,
+                            kaid: "kaid_370073704356984461795078"
+                        },
+                        {
+                            name: "Programming King",
+                            points: [2, 6.5, 3, 5, 5, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_110960321266482795332482"
+                        },
+                        {
+                            name: "Cool Coder",
+                            points: [3.5, 4.5, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_8345040057281136994412"
+                        },
+                        {
+                            name: "TotallyASheep",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 3,
+                            kaid: "kaid_697355756100265494665675"
+                        },
+                        {
+                            name: "appaloosa63",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 2,
+                            kaid: "kaid_555020165505304829388864"
+                        },
+                        {
+                            name: "mcauch",
+                            points: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: ""
+                        },
+                        {
+                            name: "hazelhades",
+                            points: [3, 3, 2, 0, 3.5 * 2, 0, 0, 0, 0, 0],
+                            rank: 0,
+                            kaid: "kaid_954404018456397123583891"
+                        }
+                    ],
+                    avatars: [
+                        "terratrice-avatar-0/6653437722902528/5074654184226816.png",
+                        "terratrice-1/5874240637255680/5311290683834368.png",
+                        "terratrice-2/4614231651663872/5740131558506496.png",
+                        "terratrice-3/5469850524860416/6595750431703040.png",
+                        "terratrice-4/6237346366373888/4829971482820608.png",
+                        "terratrice-team-image/5461615638102016/6587515544944640.png"
+                    ]
+                }
+            ];
+            
+            var levelCheck = 4, string = "", week = 4;
+            for (var t = 0; t < teams.length; t++) {
+                for (var i = 0; i < teams[t].participants.length; i++) {
+                    var PAR = teams[t].participants[i];
+                    
+                    if (PAR.rank === levelCheck && PAR.points[week] > 4) {
+                        string += PAR.name + ": " + PAR.points[week] + ", ";
+                    } 
+                }
+            }
+            //alert(string);
+             
+            /*
+            *Founder - Challenge Results*
+            Hi everyone, the points for challenge 4 have been turned in. Go and see who the leading teams are and how many points you have. :)
+            
+            Here the winning users and their program from each level!
+            _Level 0_
+            hazelhades from team Terratrice, check out their program; 
+            https://www.khanacademy.org/computer-programming/primevera-graphic-level-0-growing-plant/5499018965041152
+            
+            _Level 1_
+            Dandelion Fire Coding from team Icicle, check out their program; 
+            https://www.khanacademy.org/computer-programming/chemist-apprentice-primavera/6044287726141440
+            
+            _Level 2_
+            Mango from team Pyroach, check out their program; 
+            https://www.khanacademy.org/computer-programming/i/5709513251766272
+            
+            _Level 3_
+            Quantum Coding from team Mountaintop, check out their entry; 
+            https://www.khanacademy.org/computer-programming/reality-game/6414196924104704
+            
+            _Level 4_
+            JentGent from team Icicle scored 8, check out their entry; 
+            https://www.khanacademy.org/computer-programming/i/6368306339397632
+            
+            
+            Each of these winners scores an additional 3 points! 
+            Like always, there were a few ties, so I had to make some hard decisions. :)
+            
+            Keep up the great work everyone! 
+            */
+            
+            var teamsList = [];
+            function createTeams() {
+                for (var index in teams) {
+                    var team = teams[index];
+                    
+                    //Add points from each team participant
+                    var points = 0;
+                    for(var p_index = 0; p_index < team.participants.length; p_index++) {
+                        //sum up all the points for each participant
+                        var arr = team.participants[p_index].points;
+                        points += arr.reduce(function (a, b) {return a + b;}, 0);
+                    }
+                    //Add points that the team has acquired (bonus points)
+                    points += team.points.reduce(function (a, b) {return a + b;}, 0)
+                    
+                    teamsList.push(
+                        {
+                            name: team.name,
+                            description: team.description,
+                            home: team.home,
+                            points: points,
+                            members: team.participants.length,
+                            avatars: team.avatars,
+                            participants: team.participants
+                        }
+                    );
+                }
+            }
+            createTeams();
+            
+            //sorts the teams list
+            function sortTeams(criteria) {
+                teamsList.sort(function(a, b) {
+                    switch(criteria) {
+                        case "points":
+                            return b.points - a.points; //sort by points in descending order
+                        default:
+                            return a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1; //sort by name
+                    }
+                });
+            };
+            sortTeams("name");
+
+            //create dynamic list of participants
+            var participantsList = [], participantsListFiltered = [];
+            function createParticipants(p_array) {
+                p_array.length = 0;
+                for (var t_index in teamsList) {
+                    var team = teamsList[t_index];
+                    
+                    for (var p_index in team.participants) {
+                        var participant = team.participants[p_index];
+                        p_array.push(
+                            {
+                                name: participant.name,
+                                team: team.name,
+                                //add all the points for the participant
+                                points: participant.points.reduce(function (a, b) {return a + b;}, 0),
+                                pointsArr: participant.points,
+                                rank: participant.rank,
+                                kaid: participant.kaid,
+                                avatar: team.avatars[participant.rank]
+                            }
+                        );
+                    }
+                }
+            }
+            createParticipants(participantsList);
+            createParticipants(participantsListFiltered);
+
+            //sorts the members list
+            var memberRankOrder = -1;
+    		function sortMembers(criteria) {
+                var rankSortChanged = false;
+                participantsListFiltered.sort(function(a, b) {
+                    switch(criteria) {
+                        case "rank":
+                            if(memberRankOrder === 1) {
+                                rankSortChanged = true;
+                                return a.rank - b.rank; //sort by rank in ascending order
+                            }
+                            else {
+                                rankSortChanged = true;
+                                return b.rank - a.rank; //sort by rank in descending order
+                            }
+                        case "team":
+                                return a.team.toUpperCase() < b.team.toUpperCase() ? -1 : 1; //sort by team in ascending order
+                        case "points":
+                            return b.points - a.points; //sort by points in descending order
+                        default:
+                            return a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1; //sort by name
+                    }
+                });
+                if(rankSortChanged === true) {
+                    memberRankOrder*= -1;
+                }
+            };
+            sortMembers("team");
+            sortMembers("rank");
+
+            function filterMembers(filter, criteria) {
+                if(criteria !== "") { //only filter if team name or level selected
+                    participantsListFiltered = participantsList.filter(function(participant) {
+                        if(filter === "team") {
+                            return participant.team === criteria;
+                        }
+                        else {
+                            return participant.rank === criteria;
+                        }
+                    });
+                    sortMembers("team");
+                    sortMembers("name");
+                }
+                else {
+                    createParticipants(participantsListFiltered);
+                    sortMembers("team");
+                }
+                
+                setupMembers();
+            }
+
+            //displays the avatars on the home page
+            $("#home-avatars").empty();
+            for(var i = 0; i < teams.length; i++) {
+                var team = teams[i];
+                
+                $("#home-avatars").append('<img class="home-avatar-' + team.name + '" src="' + team.avatars[4] + '" title="' + team.name + '" width="60">');
+            }
+            
+            //appends the members to the members table
+            setupMembers = function() {
+                var membersTable = '<table cellspacing="0" class="table-members">' +
+                    '<thead>' +
+                        '<tr>' +
+                            '<th class="members-header-avatar"></th>' +
+                            '<th class="members-header-name"><a href="/" onclick="sortMembers();setupMembers();return false;">Name</a></th>' +
+                            '<th class="members-header-team"><a href="/" onclick="sortMembers(\'team\');setupMembers();return false;">Team</a></th>' +
+                            '<th class="members-header-info">Info</th>' +
+                            '<th class="members-header-level"><a href="/" onclick="sortMembers(\'rank\');setupMembers();return false;">Level</a></th>' +
+                            '<th class="members-header-points"><a href="/" onclick="sortMembers(\'points\');setupMembers();return false;">Points</a></th>' +
+                        '</tr>' +
+                    '</thead>' +
+                    '<tbody>';
+                
+                for(var i = 0; i < participantsListFiltered.length; i++) {
+                    var member = participantsListFiltered[i];
+                    
+                    var profile = "";
+                    
+                    if(member.kaid !== "") {
+                        profile = '<a title="' + member.name + '" href="https://www.khanacademy.org/profile/' + member.kaid + '" target="_blank">view</a>';
+                    }
+                    
+                    membersTable += '<tr>' +
+                        '<td class="members-avatar"><img src="' + member.avatar + '" width="30" height="30"></td>' +
+                        '<td class="members-name">' + member.name + '</td>' +
+                        '<td class="members-team">' + member.team + '</td>' +
+                        '<td class="members-info">' + profile + '</td>' +
+                        '<td class="members-level">' + member.rank + '</td>' +
+                        '<td class="members-points"><a title="Points" href="/" onclick="toggleParticipantScoresModal(\'' + member.kaid + '\');return false;" target="_blank">' + member.points + '</a></td>' +
+                        
+                    '</tr>';
+                }
+                
+                membersTable += '</tbody></table>';
+                
+                $("#membersTable").empty();
+                $("#membersTable").append(membersTable);
+            }
+            setupMembers();
+            
+            //appends the teams/scores to the teams/scores table
+            setupScores = function() {
+                var scoresTable = '<table cellspacing="0" class="table-scores">' +
+                    '<thead>' +
+                        '<tr>' +
+                            '<th class="scores-header-avatar"></th>' +
+                            '<th class="scores-header-team"><a href="/" onclick="sortTeams();setupScores();return false;">Team</a></th>' +
+                            '<th class="scores-header-home">Home</th>' +
+                            '<th class="scores-header-members"># Members</th>' +
+                            '<th class="scores-header-points"><a href="/" onclick="sortTeams(\'points\');setupScores();return false;">Points</a></th>' +
+                        '</tr>' +
+                    '</thead>' +
+                    '<tbody>';
+                
+                for (var index in teamsList) {
+                    var team = teamsList[index];
+            
+                    scoresTable += '<tr class="team-' + team.name + '">' +
+                        '<td class="scores-avatar"><img src="' + team.avatars[0] + '" width="30px"></td>' +
+                        '<td class="scores-team">' + team.name + '</td>' +
+                        '<td class="scores-home">' +
+                                '<a title="' + team.name + '" href="https://www.khanacademy.org/computer-programming/' + team.home + '" target="_blank">view</a>' +
+                        '</td>' +
+                        '<td class="scores-members">' + team.participants.length + '</td>' +
+                        '<td class="scores-points">' + team.points + '</td>' +
+                    '</tr>';
+                }
+                
+                scoresTable += '</tbody></table>'; 
+                
+                $("#scoresTable").empty();
+                $("#scoresTable").append(scoresTable);
+            }
+
+            setupScores();
+            
+            //appends the teams content
+            setupAvatars = function(teamName) {
+                var teamsContent = "";
+                
+                for(var i = 0; i < teamsList.length; i++) {
+                    var team = teamsList[i];
+                    
+                    if(team.name === teamName) {
+                        var avatars = team.avatars;
+                        
+                        teamsContent = 
+                            '<article id="team-content"><h2>' + teamName + '</h2>' +
+                            '<p>Members: ' + team.participants.length + '<span style="padding-left: 15px;">Homepage: <a href="https://www.khanacademy.org/computer-programming/' + team.home + '">view</a></span></p></article>' + 
+                            '<nav id="team-avatars">' +
+                                '<ul class="nav">';
+                        
+                        teamsContent += 
+                            '<li class="avatars-avatar avatars-avatar-0"><img src="' + avatars[0] + '" width="65px"></li>' +
+                            '<li class="avatars-avatar avatars-avatar-1"><img src="' + avatars[1] + '" width="90px"></li>' +
+                            '<li class="avatars-avatar avatars-avatar-2"><img src="' + avatars[2] + '" width="100px"></li>' +
+                            '<li class="avatars-avatar avatars-avatar-3"><img src="' + avatars[3] + '" width="100px"></li>' +
+                            '<li class="avatars-avatar avatars-avatar-4"><img src="' + avatars[4] + '" width="120px"></li>';
+                        
+                        teamsContent += '</nav></ul>';
+                        
+                        teamsContent += 
+                            '<article id="team-description"><p>' + team.description.replace('<br>', '</p><p>') + '</p></article>';
+                    }
+                }
+
+                $("#teamName").empty();
+                $("#teamName").append(teamsContent);
+                
+                $('#teams nav li').removeClass('active');
+                $("#"+teamName+"Button").addClass('active');
+            }
+            var randomTeam = Math.floor(Math.random() * teams.length);
+            setupAvatars(teamsList[randomTeam].name);
+            
+            var participantScoresModal = document.querySelector(".participant-scores-modal");
+            var participantScoresModalContent = document.querySelector(".participant-scores-modal-content");
+            
+            function toggleParticipantScoresModal(id) {
+                participantScoresModalContent.innerHTML = "";
+                $("#participant-scores-modal-header").empty();
+                if(id) {
+                    for(var i = 0; i < participantsList.length; i++) {
+                        if(participantsList[i].kaid === id) {
+                            //Contest header
+                            $("#participant-scores-modal-header").append('<span>' + participantsList[i].name + '</span><span onClick="toggleParticipantScoresModal();" class="participant-scores-close-button">&times;</span>');
+                    
+                            for(var p = 0; p < participantsList[i].pointsArr.length; p++) {
+                                participantScoresModalContent.innerHTML += "<div><strong>" + pointsMatrix[p] + ":</strong> " + participantsList[i].pointsArr[p] +  "</div>";
+                            }
+                            
+                            break; 
+                        }
+                    }
+                }
+                else {
+                    $("#participant-scores-modal-header").append('<span>KAID missing</span><span onClick="toggleParticipantScoresModal();" class="participant-scores-close-button">&times;</span>');
+                    participantScoresModalContent.innerHTML += "<div><p>Seems as though we don't have your KAID</p><p>Once we have this then you will be able to see your individual points.</p><p>Please let Iron Programming know what it is in a new thread under the Tips & Thanks.</p></div>";
+                    
+                }
+                participantScoresModal.classList.toggle("show-modal");
+            }
+            
+            //handles showing the modals
+            function windowOnClick(event) {
+                if (event.target === participantScoresModal) {
+                    toggleParticipantScoresModal();
+                }
+            }
+            window.addEventListener("click", windowOnClick);
+            
+        </script>
+    </body>
+</html>
